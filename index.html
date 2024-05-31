@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Kanban Board</title>
+</head>
+<body>
+    <div class="title">
+        <h1>Kanban Board</h1>
+        <h2>Drag & Drop</h2>
+    </div>
+
+    <form id="todo-form" class="todo-form">
+        <input type="text" placeholder="New To Do..." id="todo-input"/>
+        <button type="submit">Add Task</button>
+    </form>
+
+    <div class="board">
+
+        <div class="lanes">
+
+            <div class="swim-lane" id="todo-lane">
+                <h3 class="heading">To Do</h3>
+                <p class="task" draggable="true">Fake Task 1</p>
+                <p class="task" draggable="true">Fake Task 2</p>
+                <p class="task" draggable="true">Fake Task 3</p>
+            </div>
+
+            <div class="swim-lane" id="doing-lane">
+                <h3 class="heading">Doing</h3>
+                <p class="task" draggable="true">Fake Task 1</p>
+                <p class="task" draggable="true">Fake Task 2</p>
+                <p class="task" draggable="true">Fake Task 3</p>
+            </div>
+
+            <div class="swim-lane" id="done-lane">
+                <h3 class="heading">Done</h3>
+                <p class="task" draggable="true">Fake Task 1</p>
+                <p class="task" draggable="true">Fake Task 2</p>
+                <p class="task" draggable="true">Fake Task 3</p>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script src="todo.js"></script>
+    <script src="drag.js"></script>
+</body>
+</html>

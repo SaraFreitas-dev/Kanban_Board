@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -ms-overflow-style: none; /* IE and EDGE */
+    scrollbar-width: none; /* Firefox */
+}
+
+*::-webkit-scrollbar{
+    display: none;
+}
+
+body::before {
+    content: "";
+    background-image: url('images/bg.jpeg');
+    background-size:auto;
+    background-position: center;
+    filter: blur(0.3px);
+    position: fixed; /* Fixed position ensures it covers the entire viewport */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+
+.title{
+    text-align: center;
+    justify-content: center;
+    padding: 20px;
+    color: #e2e2e2;
+}
+
+
+.board{
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        width: 100%;
+        height: auto;
+        padding:0 20px 40px 20px;
+}
+
+
+#todo-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:0 20px 30px 20px;
+}
+
+.lanes{
+    display: flex;
+    gap:20px;
+    justify-content: space-between;
+}
+
+.swim-lane {
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 200px;
+    height: auto;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+}
+
+.task {
+    background: rgba(108, 104, 213, 0.826);
+    color: #ffffff;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 3px;
+    box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;      
+    position: relative;               
+}
+
+.task .delete-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: smaller; /* Make the delete button text smaller */
+    background: transparent; /* Make the background transparent */
+    border: none; /* Remove border */
+    color: inherit; /* Inherit color from parent */
+    cursor: pointer;
+}
+
+.heading{
+    color: #e2e2e2;
+    font-size: 26px;
+}
+
+.is-dragging {
+    background-color: rgb(5, 5, 54); 
+    transition: 0.2s;
+}
+
+
+
+@media screen and (max-width: 700px) {
+    .lanes {
+        flex-direction: column;
+    }
+
+    .task{
+        font-size: smaller;
+    }
+}
